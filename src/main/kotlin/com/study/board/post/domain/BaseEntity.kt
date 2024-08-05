@@ -1,18 +1,21 @@
-package com.study.board.board.entity
+package com.study.board.post.domain
 
 import jakarta.persistence.MappedSuperclass
 import java.time.LocalDateTime
 
 @MappedSuperclass
 abstract class BaseEntity(
-    val createdBy: String,
+    createdBy: String,
 
 ) {
+    val createdBy: String = createdBy
     val createdAt: LocalDateTime = LocalDateTime.now()
-    private var updatedBy: String? = null
-    private var updatedAt: LocalDateTime? = null
+    var updatedBy: String? = null
+        protected set
+    var updatedAt: LocalDateTime? = null
+        protected set
 
-    fun update(updatedBy: String) {
+    fun updatedBy(updatedBy: String) {
         this.updatedBy = updatedBy
         this.updatedAt = LocalDateTime.now()
     }

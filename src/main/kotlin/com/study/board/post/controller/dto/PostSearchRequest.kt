@@ -1,4 +1,4 @@
-package com.study.board.board.api.dto
+package com.study.board.post.controller.dto
 
 import org.springframework.web.bind.annotation.RequestParam
 
