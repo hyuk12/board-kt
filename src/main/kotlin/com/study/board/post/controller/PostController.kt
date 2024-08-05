@@ -1,6 +1,11 @@
 package com.study.board.post.controller
 
-import com.study.board.post.controller.dto.*
+import com.study.board.post.controller.dto.PostCreateRequest
+import com.study.board.post.controller.dto.PostDetailResponse
+import com.study.board.post.controller.dto.PostSearchRequest
+import com.study.board.post.controller.dto.PostSummaryResponse
+import com.study.board.post.controller.dto.PostUpdateRequest
+import com.study.board.post.controller.dto.toDto
 import com.study.board.post.service.PostService
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable

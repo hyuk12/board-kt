@@ -35,6 +35,5 @@ class PostService(
         }
         postRepository.delete(post)
         return id
-
     }
 }
