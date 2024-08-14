@@ -1,7 +1,7 @@
 package com.study.board.post.service
 
-import com.study.board.post.exception.PostNotDeletableException
-import com.study.board.post.exception.PostNotFoundException
+import com.study.board.exception.PostNotDeletableException
+import com.study.board.exception.PostNotFoundException
 import com.study.board.post.repository.PostRepository
 import com.study.board.post.service.dto.PostCreateRequestDto
 import com.study.board.post.service.dto.PostDetailResponseDto

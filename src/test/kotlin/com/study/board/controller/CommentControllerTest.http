@@ -13,7 +13,7 @@ Content-Type: application/json
 
 {
     "content": "수정된 댓글 내용",
-    "updatedBy": "수정된 댓글 작성자"
+    "updatedBy": "댓글 생성자"
 }
 
 ### 댓글 삭제

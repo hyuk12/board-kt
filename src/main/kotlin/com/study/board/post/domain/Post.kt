@@ -1,7 +1,7 @@
 package com.study.board.post.domain
 
 import com.study.board.comment.domain.Comment
-import com.study.board.post.exception.PostNotUpdatableException
+import com.study.board.exception.PostNotUpdatableException
 import com.study.board.post.service.dto.PostUpdateRequestDto
 import jakarta.persistence.CascadeType
 import jakarta.persistence.Entity
