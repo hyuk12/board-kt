@@ -6,6 +6,7 @@ import com.study.board.post.controller.dto.PostSearchRequest
 import com.study.board.post.controller.dto.PostSummaryResponse
 import com.study.board.post.controller.dto.PostUpdateRequest
 import com.study.board.post.controller.dto.toDto
+import com.study.board.post.controller.dto.toResponse
 import com.study.board.post.service.PostService
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
@@ -17,7 +18,6 @@ import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
-import java.time.LocalDateTime
 
 @RestController
 class PostController(
@@ -51,13 +51,7 @@ class PostController(
     fun getPost(
         @PathVariable id: Long,
     ): PostDetailResponse {
-        return PostDetailResponse(
-            id = id,
-            title = "title",
-            content = "content",
-            createdBy = "createdBy",
-            createdAt = LocalDateTime.now().toString()
-        )
+        return postService.getPost(id).toResponse()
     }
 
     @GetMapping("/posts")
